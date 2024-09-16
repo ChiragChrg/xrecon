@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local"
 import "./globals.css";
-// import Provider from "@/providers/Provider";
+import Provider from "@/Providers/Provider";
 
 const poppins = localFont({
   src: [
@@ -98,9 +98,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        {/* <Provider attribute="class" enableSystem storageKey="xrecon-theme"> */}
-        {children}
-        {/* </Provider> */}
+        <Provider attribute="class" enableSystem storageKey="xrecon-theme">
+          {children}
+        </Provider>
       </body>
     </html>
   );
